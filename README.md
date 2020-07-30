@@ -1,32 +1,114 @@
-# Capstone Project Requirements
+# Twitter Sentiment Analysis on
+
+![](images/4.jpg)
+
+## Proclamation Suspending Entry of Aliens Who Present a Risk to the U.S. Labor Market Following the Coronavirus Outbreak
+ 
+###  By Khulood Nasher
 
 ## Introduction
+### Define the Problem
 
-In this lesson, we'll discuss the requirements for our **Capstone Project**!
+Disease diagnosis with radiology is a common practice in medicine  but requires doctors to interpret the results from the x-ray images. Due to the increase in the number of patients and the low availability of doctors, there was a need for a new method to diagnose .
+Fortunately machine learning has introduced the solution for this problem . In this project we are going to introduce deep learning models and techniques in diagnosing pneumonia.
+Through this project, we applied deep learning CNN techniques in image classification and we followed the data science methodlogy as follows:
 
-## Objectives
+![](images/methodlogy.jpeg)
 
-You will be able to:
 
-* Describe all required aspects of the final project
-* Describe what constitutes a successful project
 
-## Introduction
+# Obtain Data:
 
-Congratulations on making it to the final project! It's been a long journey, but we can finally see the light at the end of the tunnel!
+## Preprocessing Images:
 
-![Actual Footage of you seeing the light at the end of the tunnel](/end-of-tunnel.gif)
+* All the images were reshaped to size 150 by 150
 
-Now that you've learned everything we have to teach you, it's time to show off and flex your data science muscles with your own **_Capstone Project_**! This project will allow you to showcase everything you've learned as a data scientist to by completing a professional-level data science project of your choosing. This project will be significantly larger than any project you've completed so far, and will be the crown jewel of your portfolio. A strong capstone project is the single most important thing you can do to get the attention of potential employers, so be prepared to put as much effort into this project as possible - the results will be **_worth it!_**
+* Load image data from the hierarchical file 'chest_xray' using an image datagenerator.
 
-![Your portfolio brings all the employers to your inbox](/milkshake.gif)
+* define testing,training , validation.
 
-## Topic Requirements
+* Decode the JPEG content to RGB grids of pixels.
 
-Your project should develop a data product or analysis related to a single topic. You are completely free to choose any topic that interests you, but keep in mind that you will need to complete this project end-to-end, including sourcing your own data. When choosing a topic, think through these questions:  
+* reshape all images to same size of 150 x 150 pixels
 
-* What would I be motivated to work on?
-* What data could I use?
+* Convert pixels into floating point tensors
+
+* chuck data by "batch_size=32'
+
+* Rescale the pixel values( between o and 255) to the [0,1] interval.
+
+## About the X-ray images data:
+An input of  total x-ray images of 4,704  were  downloaded  from kaggle, 
+
+https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia. 
+
+The data images in  kaggle was not split appropriately, so we split the images  manually  with percentages of :60% train, 20% val, 20% test.
+
+Our image data were as follows:
+
+
+## Train data:
+ 
+ 2480 images belong to 2 classes: Normal and pneumonia.The Normal images in the training set  are 878 images, while the pneumonia images are 1604 images which is 
+ 
+ almost double the number.
+
+## Validation Data:
+
+There are 1102 images belonging to 2 classes:Normal and pneumonia.The Normal images in the training set  are 322 images, while the pneumonia images are 802 images 
+which is almost double the number.
+
+## Test data:
+
+There are 1102 images belonging to 2 classes:Normal and pneumonia.The Normal images in the training set  are 321 images, while the pneumonia images are 781 images 
+which is almost double the number.
+
+![](images/pneumonianormaldistrib.png)
+
+![](images/pneumonianormalxray.png)
+
+# Methodology:
+
+## Question1: How is an image classification model typically designed?
+
+We can divide this process broadly into 4 steps. Each step requires a certain amount of time to execute: https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/
+
+###  Loading and pre-processing Data – 30% time
+
+### Defining Model architecture – 10% time
+
+### Training the model – 50% time
+
+### Estimation of performance – 10% time
+
+Train data - used to make CNN adjust weights(parameters)
+
+Validation Data - used to make CNN adjust hyperparameters. This has to be done manually
+
+Test Data - Final testing of performance
+We will need to go back after each iteration, fine-tune my steps, and run it again. Having a solid understanding of the underlying concepts will go a long way in accelerating the entire process.
+ 
+ 
+### Training the model
+
+For training the model, we require:
+
+Training images and their corresponding true labels, used  CNN deep learning and adjust weights(parameters) through hypertuning parameters such as: Padding,Dropout, 
+Elastic Net,Augmentation techniques,Transfer Learning Techniques,VGG16.
+
+Validation images and their corresponding true labels (we use these labels only to validate the model and not during the training phase)
+
+We also define the number of epochs. we ran all the models for 30 epochs.
+
+
+
+![](images/baselineaccuracy.png)
+
+
+![](images/baselineloss.png)
+
+
+![](images/RidgeLassoacc.png)
 * How could an individual or organization use my product or findings?
 * What will I be able to accomplish in the time I have available?
 * What challenges do I foresee with this project?
