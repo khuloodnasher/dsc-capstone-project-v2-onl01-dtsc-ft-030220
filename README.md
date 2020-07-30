@@ -278,8 +278,55 @@ functions used in the network.
 https://keras.io/models/model/
  
 
+# Conclusion
 
+After exploring multiple classifiers with hyper tuning, balancing,on diffirent nlp techniques of vectorizing withTfdif,Doc2Vec,Word2Vec and using a pretrained model i.e.Glove, I found out:
+* All the models perform better with Tfdif vectorizer. Adding any more efforts of powerful vectorizing, pretrained models, balancing or hypertuning were always performing worse.
+
+* I can refer that to the great efforts that I spent on manually labeling my tweets, and investigating in depth the meaning of every single tweets including the sarcastic tweets, or words that have positive meaning but has negative sentiment in our tweet, such as the word 'help' or word 'save'. Both words are positive in the English dictionary, but they are negative in our analysis because those two words were widely used by opponents who disagree with the proclomation and calling for example to "save j1 visa", or " help families from sepration".
+
+* Random Forest model was the best model with accuracy and Recall of 0.96. The smote sampling and gridsearch didn't improve the accuracy.
+
+* The words identified as important negative feature are: H1B,S386,SenatorDurbin,End,help,SaveJ1,US,h1bvisa,immigrants,GCBCoalition,Equality,visa,J1,families,American,years,immigration,PassS386,ban ,future.
+
+* The words that identified as positive features are: tech, American,jobs,young,immigration ,realDonaldTrump,OPT,graduates,imported, excluded,CEOs,Valley,Silicon,Trump, techworkers.
+
+* The power of the model to identify slight differences of the presence of words among the three classifications is evident by how closely their presence was in each class. For example, the word "launch" showed up in 0.03% of negative tweets, 0.06% of neutral tweets and 0.04% of positive tweets. This sensitivity was evident across the most important words contributing to the model.
  
+
+# Recommendation:
+## Based on the public reaction we see that:
+* Consider the side effect suspension exchange visitor in job market and income, especially the au pair programs, camps and j student tuition
+
+* Consider the income of Tax collection from Work visa immigrants on the fiscal of year 2021.
+
+* Big Technology Companies policy in hiring immigrants versus Americans and prioritizing Americans needs to be deeply investigated and more standards need to be put to give the opportunity for Americans First.
+
+* Diversity of all races of Americans need to be considered in employment.
+
+* Consider the tax income from all immigration programs as kind of standard for increasing or decreasing immigration window particularly during staging time of covid 19.
+
+* Consider the adverse factors such as the reduction from decreasing travel, exchange programs, and increase remote overseas employment particularly in tech jobs.
+
+* Fill the demands from American physicians first , then cover the shortage from international immigrants,OPT F1/J1 students.
+
+* Consider the income that comes from tuition paid by F1, and J1 student visa as a source of income and in the same time prioritize the employment opportunities for Americana.
+
+* Consider the humanitarian factors of family separation with regards H4 visa suspension, by removing visa ban but allowing suspension of employment authorization during Covid 19.
+
+* Use my model for sentiment analysis of any immigration ban in the future.
+
+
+# Furture Work
+* Increasing my dataset and combining more immigration sentiments that include all previous immigration bans.
+
+* Try more nlp pretrained models as : ULMFiT,Transformer,Google’s BERT.
+
+* Try different Word Embeddings as: ELMo and Flairin and join them with pretrained models.
+
+* Do the same sentiment analysis on facebook.
+
+
 
 
 
