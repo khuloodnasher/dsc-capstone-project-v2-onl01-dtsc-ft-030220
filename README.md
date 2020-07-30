@@ -128,8 +128,7 @@ Visualize tweet class distribution
 
 
 # Distribution of tweets in each class
-![](images/sentiment piplot.png)
-
+![](images/sentimentpiplot.png)
 
  
 
