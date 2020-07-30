@@ -130,6 +130,9 @@ Visualize tweet class distribution
 # Distribution of tweets in each class
 ![](images/sentimentpiplot.png)
 
+
+# Bar plot Distribution of tweets in each class
+![](images/tweetdistributionineachclass.png)
  
 
 
