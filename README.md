@@ -134,5 +134,14 @@ Visualize tweet class distribution
 # Bar plot Distribution of tweets in each class
 ![](images/tweetdistributionineachclass.png)
  
+ # Barplot of lenght of tweets based in number of words in each class 
+ ![](images/barplotsentimentlength.png)
+
+
+#  The Twenty Five Most Commonwords
+ ![](images/25mostcommonwords.png)
+
+ 
+
 
 
