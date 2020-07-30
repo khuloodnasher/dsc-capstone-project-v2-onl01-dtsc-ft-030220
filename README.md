@@ -147,6 +147,63 @@ Visualize tweet class distribution
  # The most common 25 words in the Positive  Sentiment
    ![](images/25positivewords.png)
 
+# PreProcessing Data: 
+
+Data was preprocessed as follows:
+
+Target columns of sentiments were encoded to 0 for negative sentiment, 1 for neutral sentiment, and 2 for negative sentiment.
+
+Tweets were tokenized, then vectorized using one of vectorizer such as TFIDF, and embedding techniques. 
+
+# Modelling Data: 
+
+For searching for better accuracy,Modelling Data was done in three parts.
+
+## Part 1: TfidfVectorizer:
+### Vectorization:
+TF-IDF
+### Classifiers:
+LinearSVC, SGDClassifier,LogisticRegression,Random Forest balanced with smote and gridserch tuned, Multinomial NB, Adaboost, XGBoost, Neural Network
+Train-Test Split: 60% Training, 40% Testing Evaluation: Confusion Matrix, Classification Report, Accuracy Score
+ 
+### Train-Test Split:
+60% Training, 40% Testing
+
+### Evaluation:
+
+Confusion Matrix, Classification Report, Accuracy Score
+ 
+ 
+# Part 2: Embedding with Doc2Vec Vectorizer.
+ 
+
+## Vectorization:
+Doc2Vec
+
+### Classifiers:
+LinearSVC, Random Forest, Multinomial NB, Adaboost, XGBoost, Neural Network
+Train-Test Split:
+60% Training,40% Testing
+### Evaluation:
+Confusion Matrix, Classification Report, Accuracy Score
+ 
+ 
+# Part 3: GloVe Word Embedding Classifiers - 100d
+
+## Vectorization:
+
+GloVe embeddings (100d per word, pre-trained on corpus of 2 billion tweets)
+
+Mean embeddings are then calculated using the words present in each tweet
+
+### Classifiers:
+LinearSVC, Random Forest, Multinomial NB, Adaboost, XGBoost, Neural Network
+
+### Train-Test Split:
+60% Training, 40 % Testing
+### Evaluation:
+Confusion Matrix, Classification Report, Accuracy Score
+ 
 
  
 
