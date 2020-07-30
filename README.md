@@ -127,6 +127,8 @@ Visualize tweet class distribution
 ![](images/neutralcloud.png)
 
 
+# Distribution of tweets in each class
+![](images/sentiment piplot.png)
 
 
  
