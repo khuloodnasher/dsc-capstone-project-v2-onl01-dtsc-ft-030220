@@ -8,43 +8,60 @@
 
 ## Introduction
 ### Define the Problem
+https://www.whitehouse.gov/presidential-actions/proclamation-suspending-entry-aliens-present-risk-u-s-labor-market-following-coronavirus-outbreak/
 
-Disease diagnosis with radiology is a common practice in medicine  but requires doctors to interpret the results from the x-ray images. Due to the increase in the number of patients and the low availability of doctors, there was a need for a new method to diagnose .
-Fortunately machine learning has introduced the solution for this problem . In this project we are going to introduce deep learning models and techniques in diagnosing pneumonia.
-Through this project, we applied deep learning CNN techniques in image classification and we followed the data science methodlogy as follows:
+# Define The Probelm
+ ## Background
 
-![](images/methodlogy.jpeg)
+On June 22, 2020, president Donald Trump issued a proclamation titled:
+
+Proclamation Suspending Entry of Aliens Who Present a Risk to the U.S. Labor Market Following the Coronavirus Outbreak.
+
+This proclomation has gone into effect 12:01 a.m. eastern daylight time on June 24, 2020. This proclamation suspended entry of certain new immigrants who do not already have an approved immigrant visa. It was originally valid for 60 days, until June 22, 2020.
+
+The new proclamation extends the period for an additional 4 months, until December 31, 2020.
+
+Section 2 of the proclamation suspends entry into the United States of any alien seeking entry pursuant to any of the following nonimmigrant visas until December 31, 2020.
+
+Subject to section 3 of the proclamation:
+
+H-1B or H-2B visa, and any alien accompanying or following to join such alien;
+
+a J visa, to the extent the alien is participating in an intern, trainee, teacher, camp counselor, au pair, or summer work travel program, and any alien accompanying or following to join such alien.
+
+an L visa, and any alien accompanying or following to join such alien.
 
 
 
-# Obtain Data:
+## Main Questions:
+1- What do people think about proclamation June22?
 
-## Preprocessing Images:
+2- What aspects get the most negative mentions?
 
-* All the images were reshaped to size 150 by 150
+3- What aspects get the most positive mentions?
 
-* Load image data from the hierarchical file 'chest_xray' using an image datagenerator.
+To answer those questions, I performed twitter sentiment analysis. I collected tweets during the period from June 26-July 25 2020.
 
-* define testing,training , validation.
+Sentiments of the public were collected by tracing the following hashtags:
 
-* Decode the JPEG content to RGB grids of pixels.
+H2bvisa
 
-* reshape all images to same size of 150 x 150 pixels
+h4visa
+Lvisa
 
-* Convert pixels into floating point tensors
+J1 Visa
+h1bvisa
 
-* chuck data by "batch_size=32'
 
-* Rescale the pixel values( between o and 255) to the [0,1] interval.
+workvisa
 
-## About the X-ray images data:
-An input of  total x-ray images of 4,704  were  downloaded  from kaggle, 
+I collected weekly tweets of the above hashtags using the following website: https://www.vicinitas.io/free-tools/download-search-tweets?tracker=%23+h1p+visa
 
-https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia. 
+Where an excel reoprt was downloaded and proccessed as acsv file. Columns of tweetId, and tweets were used for my sentiment analysis.
 
-The data images in  kaggle was not split appropriately, so we split the images  manually  with percentages of :60% train, 20% val, 20% test.
+On my sentiment analysis, I pursed the data science approch i.e. known as: (OSEMN) which is abbreviation for :Obtain data, Scrub Data, Explore Data, Model Data , and Finally interpret Data as following:
 
-Our image data were as follows:
+![](images/osemn.png)
 
 
 ## Train data:
@@ -63,7 +80,6 @@ which is almost double the number.
 There are 1102 images belonging to 2 classes:Normal and pneumonia.The Normal images in the training set  are 321 images, while the pneumonia images are 781 images 
 which is almost double the number.
 
-![](images/pneumonianormaldistrib.png)
 
 ![](images/pneumonianormalxray.png)
 
