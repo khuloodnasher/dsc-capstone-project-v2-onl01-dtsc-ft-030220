@@ -123,6 +123,11 @@ Visualize tweet class distribution
 ![](images/positivecloud.png)
 
 
+# Neutral Word Clod
+![](images/neutralcloud.png)
+
+
+
 
  
 
