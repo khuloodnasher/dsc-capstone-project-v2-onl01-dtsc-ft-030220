@@ -140,6 +140,13 @@ Visualize tweet class distribution
 
 #  The Twenty Five Most Commonwords
  ![](images/25mostcommonwords.png)
+ 
+ # The most common 25 words in the Negative Sentiment
+  ![](images/25negativewords.png)
+
+ # The most common 25 words in the Positive  Sentiment
+   ![](images/25positivewords.png)
+
 
  
 
