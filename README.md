@@ -64,7 +64,8 @@ On my sentiment analysis, I pursed the data science approch i.e. known as: (OSEM
 ![](images/osemn.png)
 
 
-## Train data:
+## Methodlogy
+![](images/methodlogy.png)
  
  2480 images belong to 2 classes: Normal and pneumonia.The Normal images in the training set  are 878 images, while the pneumonia images are 1604 images which is 
  
@@ -85,8 +86,7 @@ which is almost double the number.
 
 # Methodology:
 
-## Question1: How is an image classification model typically designed?
-
+![](images/methodlogy.jpg)
 We can divide this process broadly into 4 steps. Each step requires a certain amount of time to execute: https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/
 
 ###  Loading and pre-processing Data – 30% time
