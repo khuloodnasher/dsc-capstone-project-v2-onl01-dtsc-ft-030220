@@ -103,6 +103,26 @@ To clean the tweets:
 
 6- Accuracy of function was increased through comparing between unlabeled tweets to the  manual  labeled tweets  and more positive and negative words were added to the list which make the function labelelling  most tweets properly.
  
+ 
+ # Explore Data
+Generate Word Clouds for tweet classes
+
+Generate word frequency distribution plots for tweet classes
+
+Visualize Distribution of Tweet Length based on number of characters.
+
+Visualize Distribution of Tweet Token Length
+
+
+Visualize tweet class distribution
+ 
+ # Negative Word Clouds
+![](images/negativecloud.png)
+
+# Positive Word Clouds
+![](images/positivecloud.png)
+
+
 
  
 
