@@ -7,8 +7,7 @@
 ###  By Khulood Nasher
 
 ## Introduction
-### Define the Problem
-https://www.whitehouse.gov/presidential-actions/proclamation-suspending-entry-aliens-present-risk-u-s-labor-market-following-coronavirus-outbreak/
+
 
 # Define The Probelm
  ## Background
@@ -16,6 +15,7 @@ https://www.whitehouse.gov/presidential-actions/proclamation-suspending-entry-al
 On June 22, 2020, president Donald Trump issued a proclamation titled:
 
 Proclamation Suspending Entry of Aliens Who Present a Risk to the U.S. Labor Market Following the Coronavirus Outbreak.
+Source:https://www.whitehouse.gov/presidential-actions/proclamation-suspending-entry-aliens-present-risk-u-s-labor-market-following-coronavirus-outbreak/
 
 This proclomation has gone into effect 12:01 a.m. eastern daylight time on June 24, 2020. This proclamation suspended entry of certain new immigrants who do not already have an approved immigrant visa. It was originally valid for 60 days, until June 22, 2020.
 
